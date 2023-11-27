@@ -145,8 +145,16 @@ new Vue({
       }, 300);
     },
     playSpecificTrack(event) {
+      // Prevent the default behavior of the anchor tag
+      event.preventDefault();
+      // Check if the click target is the anchor itself or a child element
+      const clickedElement = event.target.tagName.toLowerCase();
+      
+      // If the clicked element is not the anchor, find the closest anchor
+      const anchor = clickedElement === 'a' ? event.target : event.target.closest('a');
+
       // Get the specificTrackIndex from the data attribute
-      const specificTrackIndex = event.target.dataset.specificTrackIndex;
+      const specificTrackIndex = anchor.dataset.specificTrackIndex;
 
       // Ensure specificTrackIndex is a valid number
       if (!isNaN(specificTrackIndex)) {
