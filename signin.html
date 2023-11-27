@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="Assets/signin.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/img/Logo.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Assets/img/Logo.png" alt="Left Logo" class="logo">
+            <img src="Assets/img/wlogo.png" alt="Center Logo" class="logo-center">
+            <a href="signup.html"><button style="float: right;">SignUp</button></a>
+        </div>
+    </header>
+    <div class="content">
+    <div class="login-container">
+        <h1>SignIn</h1>
+        <br>
+        <form id="loginForm" action="home.html" method="post" onsubmit="validateForm(); return false;">
+            <div class="input-container">
+                <input type="text" id="username" name="username" placeholder="Username or Email" required>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit">Login</button>
+            <br><br>
+            <p>If you don't have an account, <a href="signup.html">Register Here</a></p>
+        </form>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Upbeat. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function validateForm() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                if (username === "" || password === "") {
+                    alert("Please enter both username and password");
+                    return;
+                }
+
+                alert("Login successful!");
+                window.location.href = "home.html";
+            }
+    </script>
+</body>
+
+</html>
