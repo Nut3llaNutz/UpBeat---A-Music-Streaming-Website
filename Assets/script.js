@@ -144,6 +144,24 @@ new Vue({
         }
       }, 300);
     },
+    playSpecificTrack(event) {
+      // Get the specificTrackIndex from the data attribute
+      const specificTrackIndex = event.target.dataset.specificTrackIndex;
+
+      // Ensure specificTrackIndex is a valid number
+      if (!isNaN(specificTrackIndex)) {
+        // Convert it to a number if needed
+        this.currentTrackIndex = parseInt(specificTrackIndex, 10);
+
+        // Set the current track to the desired track
+        this.currentTrack = this.tracks[this.currentTrackIndex];
+
+        // Reset the player to play the new track
+        this.resetPlayer();
+      } else {
+        console.error("Invalid specificTrackIndex:", specificTrackIndex);
+      }
+    },
     favorite() {
       this.tracks[this.currentTrackIndex].favorited = !this.tracks[
         this.currentTrackIndex
