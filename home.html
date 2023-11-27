@@ -38,8 +38,12 @@
     <main>
     </main>
 
-    <footer>
+    
     <div class="wrapper" id="app">
+      <a href="#" @click="playSpecificTrack" data-specific-track-index="0">Play Specific Track</a>
+      <a href="#" @click="playSpecificTrack" data-specific-track-index="1">Play Specific Track</a>
+      <a href="#" @click="playSpecificTrack" data-specific-track-index="2">Play Specific Track</a>
+      <footer>
       <div class="player">
         <div class="player-cover">
           <transition-group :name="transitionName">
@@ -93,8 +97,9 @@
         </div>
         <div v-cloak></div>
       </div>
+      </footer>
     </div>
-    </footer>
+    
 
     <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
