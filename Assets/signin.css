@@ -25,7 +25,6 @@ header {
     text-align: center;
     max-width: 400px;
     margin-top: -150px;
-    margin-left: 25px;
 }
 
 h1 {
@@ -89,8 +88,9 @@ button:hover {
 
 .logo-center {
     max-width: 250px;
-    margin-left: 550px;
-    margin-right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
 }
 
 .footer {
@@ -100,7 +100,7 @@ button:hover {
     padding: 15px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 98%;
 }
 
 footer p {
@@ -112,5 +112,10 @@ p {
 }
 
 a {
+    color: #5F9EA0;
+    text-decoration: none;
+}
+
+a:hover {
     color: #4c7f80;
 }
