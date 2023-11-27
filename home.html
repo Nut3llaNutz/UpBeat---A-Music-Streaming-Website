@@ -35,14 +35,82 @@
             <a href="#" id="btn"><i class="fa fa-search"></i>|</a>
     </section>
 
-    <main>
-    </main>
-
-    
     <div class="wrapper" id="app">
-      <a href="#" @click="playSpecificTrack" data-specific-track-index="0">Play Specific Track</a>
-      <a href="#" @click="playSpecificTrack" data-specific-track-index="1">Play Specific Track</a>
-      <a href="#" @click="playSpecificTrack" data-specific-track-index="2">Play Specific Track</a>
+      <div class="songs-sections">
+        <h2 class="section-heading">Trending Songs</h2>
+        <div class="songs-cont">
+          <div class="song-card">
+            <a href="#" @click="playSpecificTrack" data-specific-track-index="0">
+            <div class="img-cont">
+              <img src="./Assets/img/songs/japanesedenim.jpg" alt="">
+              <div class="overlay">
+                <svg class="icon">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+              </div>
+            </div>
+            </a>
+            <p class="song-name">Japanese Denim</p>
+            <p class="artist-name">Daniel Caesar</p>
+          </div>
+          <div class="song-card">
+            <a href="#" @click="playSpecificTrack" data-specific-track-index="1">
+            <div class="img-cont">
+              <img src="./Assets/img/songs/feelnoways.jpg" alt="">
+              <div class="overlay">
+                <svg class="icon">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+              </div>
+            </div>
+            </a>
+            <p class="song-name">Feel No Ways</p>
+            <p class="artist-name">Drake</p>
+          </div>
+          <div class="song-card">
+            <a href="#" @click="playSpecificTrack" data-specific-track-index="2">
+            <div class="img-cont">
+              <img src="./Assets/img/songs/solodolopt3.jpg" alt="">
+              <div class="overlay">
+                <svg class="icon">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+              </div>
+            </div>
+            </a>
+            <p class="song-name">Solo Dolo, Pt. III</p>
+            <p class="artist-name">Kid Cudi</p>
+          </div>
+          <div class="song-card">
+            <a href="#" @click="playSpecificTrack" data-specific-track-index="3">
+            <div class="img-cont">
+              <img src="./Assets/img/songs/powertrip.jpg" alt="">
+              <div class="overlay">
+                <svg class="icon">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+              </div>
+            </div>
+            </a>
+            <p class="song-name">Power Trip</p>
+            <p class="artist-name">J. Cole ft. Miguel</p>
+          </div>
+          <div class="song-card">
+            <a href="#" @click="playSpecificTrack" data-specific-track-index="4">
+            <div class="img-cont">
+              <img src="./Assets/img/songs/snooze.jpg" alt="">
+              <div class="overlay">
+                <svg class="icon">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+              </div>
+            </div>
+            </a>
+            <p class="song-name">Snooze</p>
+            <p class="artist-name">SZA</p>
+          </div>
+        </div>
+      </div>
       <footer>
       <div class="player">
         <div class="player-cover">
@@ -61,7 +129,7 @@
                 <use xlink:href="#icon-prev"></use>
               </svg>
             </div>
-            <div class="player-controls__item -xl js-play" @click="play">
+            <div class="player-controls__item -xl js-play" @click="play" id="playPauseButton">
               <svg class="icon">
                 <use xlink:href="#icon-pause" v-if="isTimerPlaying"></use>
                 <use xlink:href="#icon-play" v-else></use>
@@ -99,7 +167,6 @@
       </div>
       </footer>
     </div>
-    
 
     <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
