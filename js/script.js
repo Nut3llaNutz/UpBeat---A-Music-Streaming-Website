@@ -112,10 +112,27 @@ new Vue({
       this.audio.currentTime = (maxduration * percentage) / 100;
       this.audio.play();
     },
-    clickProgress(e) {
-      this.isTimerPlaying = true;
+    clickProgress(event) {
+      // Pause the audio while seeking
       this.audio.pause();
-      this.updateBar(e.pageX);
+
+      // Get the position of the click relative to the progress bar
+      const progress = this.$refs.progress;
+      const position = event.clientX - progress.getBoundingClientRect().left;
+
+      // Calculate the percentage based on the position
+      const percentage = (100 * position) / progress.offsetWidth;
+
+      // Update the bar and circle positions
+      this.barWidth = percentage + '%';
+      this.circleLeft = percentage + '%';
+
+      // Update the audio playback position
+      const maxduration = this.audio.duration;
+      this.audio.currentTime = (maxduration * percentage) / 100;
+
+      // Resume audio playback
+      this.audio.play();
     },
     prevTrack() {
       this.transitionName = "scale-in";
