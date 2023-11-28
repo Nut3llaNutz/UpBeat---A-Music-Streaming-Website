@@ -49,6 +49,14 @@ new Vue({
           url: "https://youtu.be/LDY_XyxBu8A?si=AulR69uVbaRV79TR",
           favorited: false
         },
+        {
+          name: "Money Trees",
+          artist: "Kendrick Lamar ft. Jay Rock",
+          cover: "https://raw.githubusercontent.com/Nut3llaNutz/UpBeat---A-Music-Streaming-Website/main/Assets/img/songs/moneytrees.jpg",
+          source: "https://raw.githubusercontent.com/Nut3llaNutz/UpBeat---A-Music-Streaming-Website/main/Assets/mp3/Kendrick Lamar-Money Trees.mp3",
+          url: "https://youtu.be/Iy-dJwHVX84?si=gaxSGmlywnhb_qrC",
+          favorited: false
+        },
       ],
       currentTrack: null,
       currentTrackIndex: 0,
