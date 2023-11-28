@@ -83,6 +83,10 @@ nav a:hover {
     color: #5F9EA0;
 }
 
+nav #a_home {
+    color: #5F9EA0;
+}
+
 main {
     padding: 20px;
 }
