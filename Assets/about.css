@@ -88,11 +88,32 @@ nav #a_about {
 }
 
 main {
+    margin: 20px;
     padding: 20px;
 }
 
-h2 {
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    padding-top: 15px;
+    background-color: #181818;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
     color: #5F9EA0;
+    margin-bottom: 55px;
+    font-size: 50px;
+}
+
+.about p {
+    width: 70%;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 200;
 }
 
 footer {

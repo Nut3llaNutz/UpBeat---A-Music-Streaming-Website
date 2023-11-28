@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albums</title>
-    <link rel="stylesheet" href="Assets/albums.css">
+    <title>Daily Mix 1</title>
+    <link rel="stylesheet" href="Assets/dailymix.css">
     <link rel="stylesheet" href="Assets/library/css/font-awesome.css">
     <link rel="shortcut icon" type="image/x-icon" href="Assets/img/Logo.png">
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap&subset=latin-ext"
@@ -26,69 +26,83 @@
 
     <nav>
         <a href="home.html"><b>Home</b></a>
-        <a href="albums.html" id="a_albums"><b>Albums</b></a>
-        <a href="playlists.html"><b>Playlists</b></a>
+        <a href="albums.html"><b>Albums</b></a>
+        <a href="playlists.html" id="a_playlists"><b>Playlists</b></a>
         <a href="about.html"><b>About</b></a>
     </nav>
 
     <div class="wrapper" id="app">
-        <div class="albums-sections">
-            <h2 class="section-heading">Popular Albums</h2>
-            <div class="albums-cont">
+        <div class="songs-section">
+            <div class="songs-cont">
                 <div class="album-card">
-                    <a href="mydearmelancholy.html">
-                        <div class="img-cont">
-                            <img src="./Assets/img/albums/mydearmeloncholy.jpg" alt="">
-                        </div>
-                    </a>
-                    <p class="album-name">My Dear Meloncholy,</p>
-                    <p class="artist-name">The Weeknd</p>
+                    <div class="img-cont">
+                        <img src="./Assets/img/playlists/1.jpg" alt="">
+                    </div>
+                    <div class="album-information">
+                        <p class="album-name">Daily Mix 1</p>
+                        <p class="artist-name">Made For You</p>
+                    </div>
                 </div>
-                <div class="album-card">
-                    <a href="#">
-                        <div class="img-cont">
-                            <img src="./Assets/img/albums/1989.jpg" alt="">
+                <a href="#" @click="playSpecificTrack" data-specific-track-index="1">
+                    <div class="song-card">
+                        <p class="song-index">1.
+                        <div class="overlay">
+                            <svg class="icon">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="album-name">1989</p>
-                    <p class="artist-name">Taylor Swift</p>
-                </div>
-                <div class="album-card">
-                    <a href="#">
-                        <div class="img-cont">
-                            <img src="./Assets/img/albums/channelorange.jpg" alt="">
+                        </p>
+                        <div class="Song-info">
+                            <p class="song-name">Me And Your Mama</p>
+                            <p class="song-artist-name">Childish Gambino</p>
                         </div>
-                    </a>
-                    <p class="album-name">Channel Orange</p>
-                    <p class="artist-name">Frank Ocean</p>
-                </div>
-                <div class="album-card">
-                    <a href="#">
-                        <div class="img-cont">
-                            <img src="./Assets/img/albums/mmtbs.jpg" alt="">
+                    </div>
+                </a>
+                <a href="#" @click="playSpecificTrack" data-specific-track-index="2">
+                    <div class="song-card">
+                        <p class="song-index">2.
+                        <div class="overlay">
+                            <svg class="icon">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="album-name">Mr. Morale <br>& The Big Steppers</p>
-                    <p class="artist-name">Kendrick Lamar</p>
-                </div>
-                <div class="album-card">
-                    <a href="#">
-                        <div class="img-cont">
-                            <img src="./Assets/img/albums/clb.jpg" alt="">
+                        </p>
+                        <div class="Song-info">
+                            <p class="song-name">I KNOW ?</p>
+                            <p class="song-artist-name">Travis Scott</p>
                         </div>
-                    </a>
-                    <p class="album-name">Certified Lover Boy</p>
-                    <p class="artist-name">Drake</p>
-                </div>
-                <div class="album-card">
-                    <a href="#">
-                        <div class="img-cont">
-                            <img src="./Assets/img/albums/wasteland.jpg" alt="">
+                    </div>
+                </a>
+                <a href="#" @click="playSpecificTrack" data-specific-track-index="3">
+                    <div class="song-card">
+                        <p class="song-index">3.
+                        <div class="overlay">
+                            <svg class="icon">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="album-name">Wasteland</p>
-                    <p class="artist-name">Brent Faiyaz</p>
-                </div>
+                        </p>
+                        <div class="Song-info">
+                            <p class="song-name">Lavender Sunflower</p>
+                            <p class="song-artist-name">Tory Lanez</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" @click="playSpecificTrack" data-specific-track-index="4">
+                    <div class="song-card">
+                        <p class="song-index">4.
+                        <div class="overlay">
+                            <svg class="icon">
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </div>
+                        </p>
+                        <div class="Song-info">
+                            <p class="song-name">3005</p>
+                            <p class="song-artist-name">Childish Gambino</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <footer>
@@ -246,7 +260,7 @@
         </defs>
     </svg>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/dailymix1.js"></script>
 </body>
 
 </html>
