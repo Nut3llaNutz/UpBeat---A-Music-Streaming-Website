@@ -30,7 +30,7 @@ new Vue({
                     artist: "Travis Scott",
                     cover: "https://raw.githubusercontent.com/Nut3llaNutz/UpBeat---A-Music-Streaming-Website/main/Assets/img/playlists/iknow.jpg",
                     source: "https://raw.githubusercontent.com/Nut3llaNutz/UpBeat---A-Music-Streaming-Website/main/Assets/mp3/playlists/Travis Scott-I KNOW.mp3",
-                    url: "https://youtu.be/fmdLsdmYzTo?si=VS_EIS-7tJU5tGz5",
+                    url: "https://youtu.be/X7aF3nZOS98?si=1eMBnnBgAiAdKNBd",
                     favorited: false
                 },
                 {
